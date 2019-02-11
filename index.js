@@ -87,9 +87,7 @@ module.exports = function (options) {
     grunt.loadNpmTasks('grunt-contrib-copy')
     grunt.loadNpmTasks('grunt-contrib-connect')
     grunt.loadNpmTasks('grunt-compile-handlebars')
-    grunt.loadNpmTasks('grunt-prettify')
     grunt.loadNpmTasks('grunt-sass')
-    grunt.loadNpmTasks('grunt-embed')
 
     process.chdir(cwd)
 
@@ -119,7 +117,7 @@ module.exports = function (options) {
 
     grunt.registerTask('stylesheets', ['sass:scss', 'concat:css', 'cssmin'])
     grunt.registerTask('javascripts', ['concat:js', 'uglify'])
-    grunt.registerTask('templates', ['clean:html', 'compile-handlebars', 'predentation', 'prettify'])
+    grunt.registerTask('templates', ['clean:html', 'compile-handlebars', 'predentation'])
     grunt.registerTask('foundation', ['sass:foundation_scss', 'concat:foundation_css']) // 'concat:foundation_js'
     grunt.registerTask('default', ['stylesheets', 'javascripts', 'foundation', 'templates'])
     grunt.registerTask('server', ['connect'])

@@ -1,0 +1,97 @@
+{
+  "item": [
+    {
+      "id": "posts",
+      "name": "Posts",
+      "item": [
+        {
+          "id": "get-post",
+          "name": "READ post",
+          "request": {
+            "url": {
+              "path": [
+                "{{project}}",
+                "posts"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET"
+          },
+          "response": [],
+          "event": []
+        },
+        {
+          "id": "get-posts",
+          "name": "READ posts",
+          "request": {
+            "url": {
+              "path": [
+                "{{project}}",
+                "posts",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "type": "any",
+                  "key": "id"
+                }
+              ]
+            },
+            "method": "GET"
+          },
+          "response": [],
+          "event": []
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "id": "proto",
+      "name": "Protocol",
+      "type": "string",
+      "value": "http://"
+    },
+    {
+      "id": "host",
+      "name": "Host",
+      "type": "string",
+      "value": "localhost"
+    },
+    {
+      "id": "baseUrl",
+      "name": "Base Url",
+      "type": "string",
+      "value": "{{proto}}{{host}}"
+    },
+    {
+      "id": "project",
+      "name": "Project",
+      "type": "string",
+      "value": "_"
+    }
+  ],
+  "auth": {
+    "type": "basic",
+    "basic": []
+  },
+  "info": {
+    "_postman_id": "41eaefcd-bf6b-4466-ac89-dc91f08ad09e",
+    "name": "Api Kitchen",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Your own API kitchen sink, where you can test all your setup endpoints and request parameters",
+      "type": "text/plain"
+    }
+  }
+}
